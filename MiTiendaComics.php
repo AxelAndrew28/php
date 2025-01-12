@@ -22,8 +22,9 @@ mostrarValorAlmacen();
 
 // Funciones
 function mostrarComicsEnTabla()
-{//Esta funcion muestra el inventario como si fuera una tabla HTML con detalles de los comicsw
-    echo "<table border='1'>"; //aqui creamos la tabla donde van los comics
+{
+    global $inventario; //Esta funcion muestra el inventario como si fuera una tabla HTML con detalles de los comicsw
+    echo "<table border='1'>";  //aqui creamos la tabla donde van los comics
     echo "<tr><th>Título</th><th>Editorial</th><th>Autor</th><th>Idioma</th><th>Precio</th><th>Stock</th></tr>";
     foreach ($inventario as $categoria => $comics) {
         foreach ($comics as $comic) {
